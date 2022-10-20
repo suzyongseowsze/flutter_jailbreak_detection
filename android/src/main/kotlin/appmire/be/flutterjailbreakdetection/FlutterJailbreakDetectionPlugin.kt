@@ -17,7 +17,7 @@ class FlutterJailbreakDetectionPlugin(private val context: Activity) : MethodCal
                 return;
             }
             val channel = MethodChannel(registrar.messenger(), "flutter_jailbreak_detection")
-            channel.setMethodCallHandler(FlutterJailbreakDetectionPlugin(registrar.activity()))
+            channel.setMethodCallHandler(FlutterJailbreakDetectionPlugin(registrar.activity()!!))
         }
     }
 
